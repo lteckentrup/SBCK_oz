@@ -83,7 +83,6 @@ def Bias_Correction(var, model, method, method_long):
                 params_dict['lon'] = lon
                 params_dict['params'] = np.nan
             else:
-                # try:
                 X0 = model_hist_values[:,i,j]
                 X1 = observation_attr_values[:,i,j]
                 Y0 = modelCOR_values[:,i,j]
@@ -140,14 +139,6 @@ def Bias_Correction(var, model, method, method_long):
                 params_dict['lat'] = lat
                 params_dict['lon'] = lon
                 params_dict['params'] = Z0
-
-                # except:
-                #     bias_corrected_results_hist[:,i,j] = np.nan
-                #     bias_corrected_results_COR[:,i,j] = np.nan
-                #
-                #     params_dict['lat'] = lat
-                #     params_dict['lon'] = lon
-                #     params_dict['params'] = np.nan
 
             correct_params.append(params_dict)
 
