@@ -30,10 +30,6 @@ def Bias_Correction(var, model, method, method_long):
     model_hist = xr.open_dataset(prcp_hist)
     model_COR = xr.open_dataset(prcp_COR)
 
-    # observed = observed.sel(time = slice('1951-01-01','2015-12-31'))
-    # model_hist = model_hist.sel(time = slice('1951-01-01','2015-12-31'))
-    # model_COR = model_COR.sel(time = slice('1951-01-01','2015-12-31'))
-
     observed = observed.sel(time = slice('1989-01-01','2010-12-31'))
     model_hist = model_hist.sel(time = slice('1989-01-01','2010-12-31'))
     model_COR = model_COR.sel(time = slice('1989-01-01','2010-12-31'))
