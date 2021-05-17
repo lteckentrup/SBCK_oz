@@ -40,13 +40,13 @@ def readin(var, model):
     lons = obs.lon.values
 
     bc_HIST = np.zeros([len(sim_HIST.time.values),
-                                            len(sim_HIST.lat.values),
-                                            len(sim_HIST.lon.values)])
+                        len(sim_HIST.lat.values),
+                        len(sim_HIST.lon.values)])
     bc_HIST[:] = np.nan
 
     bc_COR = np.zeros([len(sim_COR.time.values),
-                                           len(sim_COR.lat.values),
-                                           len(sim_COR.lon.values)])
+                       len(sim_COR.lat.values),
+                       len(sim_COR.lon.values)])
     bc_COR[:] = np.nan
 
     if var == 'prec':
